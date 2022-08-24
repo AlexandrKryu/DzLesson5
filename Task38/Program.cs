@@ -14,12 +14,19 @@ double[] GetArray(int size, int min, int max)
 }
 void PrintArray(double[] array)
 {
-    Console.Write("[");
+   Console.Write("[");
     for (int i = 0; i < array.Length; i++)
     {
-        Console.Write($"{Math.Round(array[i], 2)}, ");
+        if (i < array.Length - 1) Console.Write($"{Math.Round(array[i], 2)}, ");
+        else Console.Write($"{Math.Round(array[i], 2)}");
     }
     Console.Write("]");
+    // Console.Write("[");
+    // for (int i = 0; i < array.Length; i++)
+    // {
+    //     Console.Write($"{Math.Round(array[i], 2)}, ");
+    // }
+    // Console.Write("]");
 }
 
 void RazMaxMin(double[] arr)

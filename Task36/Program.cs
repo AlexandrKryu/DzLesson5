@@ -17,7 +17,7 @@ int[] GetArray(int size)
 void SumOddIndex(int[] arr)
 {
     int Sum = 0;
-    for (int i = 0; i < arr.Length; i = i + 2)
+    for (int i = 1; i < arr.Length; i = i + 2)
     {
         Sum = Sum + arr[i];
     }
@@ -28,13 +28,13 @@ void PrintArray(int[] arr)
     Console.Write("[");
     for (int i = 0; i < arr.Length; i++)
     {
-        Console.Write($"{arr[i]},");
+        if (i < arr.Length - 1) Console.Write($"{arr[i]}, ");
+        else Console.Write($"{arr[i]}");
     }
-    Console.Write($"]");
+    Console.Write("]");
 }
 
 int[] array = GetArray(4);
 PrintArray(array);
 SumOddIndex(array);
-
 
